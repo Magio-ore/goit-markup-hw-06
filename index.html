@@ -18,7 +18,7 @@
 
 <body>
     <header class="header">
-        <div class="container">
+        <div class="container-head">
             <nav class="nav">
                 <a href="./index.html" class="logo">WEB<span>STUDIO</span></a>
                 <ul class="nav-list">
@@ -33,6 +33,11 @@
                     <li><a href="tel:+110001111111" class="get-contacts">+11 (000) 111-11-11</a></li>
                 </ul>
             </address>
+            <button class="btn-byrger-menu" type="button">
+                <svg width="24" height="24">
+                    <use href="./images/icons.svg#icon-byrger"></use>
+                </svg>
+            </button>
         </div>
     </header>
 
@@ -51,7 +56,7 @@
         <!-- Section 1 - END -->
 
         <!-- Section 2 -->
-        <section class="section">
+        <section class="section-choose-us">
             <div class="container">
                 <h2 class="visually-hidden">Why Choose Us</h2>
                 <ul class="choose-us">
@@ -61,8 +66,8 @@
                                 <use href="./images/icons.svg#icon-antenna"></use>
                             </svg>
                         </div>
-                        <h3 class="text-h">Strategy</h3>
-                        <p class="p-text">
+                        <h3 class="text-h-choose-us">Strategy</h3>
+                        <p class="text-p-choose-us">
                             Our goal is to identify the business problem to walk away with the perfect and creative
                             solution.
                         </p>
@@ -73,8 +78,8 @@
                                 <use href="./images/icons.svg#icon-vector"></use>
                             </svg>
                         </div>
-                        <h3 class="text-h">Punctuality</h3>
-                        <p class="p-text">
+                        <h3 class="text-h-choose-us">Punctuality</h3>
+                        <p class="text-p-choose-us">
                             Bring the key message to the brand's audience for the best price within the shortest
                             possible time.
                         </p>
@@ -85,8 +90,8 @@
                                 <use href="./images/icons.svg#icon-diagram"></use>
                             </svg>
                         </div>
-                        <h3 class="text-h">Diligence</h3>
-                        <p class="p-text">
+                        <h3 class="text-h-choose-us">Diligence</h3>
+                        <p class="text-p-choose-us">
                             Research and confirm brands with the strongest digital growth opportunities and minimize
                             risk.
                         </p>
@@ -97,8 +102,8 @@
                                 <use href="./images/icons.svg#icon-astronaut"></use>
                             </svg>
                         </div>
-                        <h3 class="text-h">Technologies</h3>
-                        <p class="p-text">
+                        <h3 class="text-h-choose-us">Technologies</h3>
+                        <p class="text-p-choose-us">
                             Design practice focused on digital experiences. We bring forth a deep passion for
                             problem-solving.
                         </p>
@@ -110,12 +115,16 @@
         <!-- Section 2 - END-->
 
         <!-- Section 3 -->
-        <section class="our-team">
+        <section class="section-our-team">
             <div class="container">
                 <h2 class="m-text-our-team">Our Team</h2>
                 <ul class="our-team-list">
                     <li class="our-team-card">
-                        <img src="./images/team/mark.jpg" alt="Mark Guerrero" width="264" height="260">
+                        <img 
+                        srcset="./images/team/mark.jpg 1x, ./images/team/mark@x2.jpg 2x"
+                        src="./images/team/mark.jpg" 
+                        alt="Mark Guerrero" 
+                        width="264" height="260">
                         <div class="team-info">
                             <h3 class="text-h">Mark Guerrero</h3>
                             <p class="p-text">Product Designer</p>
@@ -152,7 +161,11 @@
                         </div>
                     </li>
                     <li class="our-team-card">
-                        <img src="./images/team/tom.jpg" alt="Tom Ford" width="264" height="260">
+                        <img 
+                        srcset="./images/team/tom.jpg 1x, ./images/team/tom@x2.jpg 2x"
+                        src="./images/team/tom.jpg" 
+                        alt="Tom Ford" 
+                        width="264" height="260">
                         <div class="team-info">
                             <h3 class="text-h">Tom Ford</h3>
                             <p class="p-text">Frontend Developer</p>
@@ -189,7 +202,11 @@
                         </div>
                     </li>
                     <li class="our-team-card">
-                        <img src="./images/team/camila.jpg" alt="Camila Garcia" width="264" height="260">
+                        <img 
+                        srcset="./images/team/camila.jpg 1x, ./images/team/camila@x2.jpg 2x"
+                        src="./images/team/camila.jpg" 
+                        alt="Camila Garcia" 
+                        width="264" height="260">
                         <div class="team-info">
                             <h3 class="text-h">Camila Garcia</h3>
                             <p class="p-text">Marketing</p>
@@ -226,7 +243,11 @@
                         </div>
                     </li>
                     <li class="our-team-card">
-                        <img src="./images/team/daniel.jpg" alt="Daniel Wilson" width="264" height="260">
+                        <img 
+                        srcset="./images/team/daniel.jpg 1x, ./images/team/daniel@x2.jpg 2x"
+                        src="./images/team/daniel.jpg" 
+                        alt="Daniel Wilson" 
+                        width="264" height="260">
                         <div class="team-info">
                             <h3 class="text-h">Daniel Wilson</h3>
                             <p class="p-text">UI Designer</p>
@@ -270,13 +291,30 @@
         <!-- Section 3 - END-->
 
         <!-- Section - 4 -->
-        <section class="portfolio-section">
+        <section class="section-portfolio">
             <div class="container">
                 <h2 class="our-portfolio">Our Portfolio</h2>
                 <ul class="portfolio-list">
                     <li class="portfolio-card">
                         <div class="portfolio-image-wrapper">
-                            <img src="./images/portfolio/banking-app.jpg" alt="Banking App">
+                            <picture>
+                                <!-- для мобільних -->
+                                <source 
+                                srcset="./images/portfolio/mobile/banking-app-m@x1.jpg 1x, 
+                                ./images/portfolio/mobile/banking-app-m@x2.jpg 2x" 
+                                media="(min-width: 320px)">
+                                <!-- для планшетів -->
+                                <source 
+                                srcset="./images/portfolio/mobile/banking-app-m@x1.jpg" 
+                                media="(min-width: 768px)">
+                                <!-- для десктопів -->
+                                <source 
+                                srcset="./images/portfolio/mobile/banking-app-m@x1.jpg" 
+                                media="(min-width: 1158px)">
+                    
+                                <!-- якщо браузер не підтримує <picture> -->
+                                <img src="./images/portfolio/banking-app.jpg" alt="Banking App">
+                            </picture>
                             <p class="portfolio-overlay-text">14 Stylish and User-Friendly App Design Concepts · Task
                                 Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
                         </div>
@@ -287,8 +325,24 @@
                     </li>
                     <li class="portfolio-card">
                         <div class="portfolio-image-wrapper">
-                            <img src="./images/portfolio/cashless-payment.jpg" alt="Cashless Payment" width="360"
-                                height="260">
+                            <picture>
+                                <!-- для мобільних -->
+                                <source 
+                                srcset="./images/portfolio/mobile/cashless-payment-m@x1.jpg 1x, 
+                                ./images/portfolio/mobile/cashless-payment-m@x2.jpg 2x" 
+                                media="(min-width: 320px)">
+                                <!-- для планшетів -->
+                                <source 
+                                srcset="./images/portfolio/mobile/cashless-payment-m@x1.jpg" 
+                                media="(min-width: 768px)">
+                                <!-- для десктопів -->
+                                <source 
+                                srcset="./images/portfolio/mobile/cashless-payment-m@x1.jpg" 
+                                media="(min-width: 1158px)">
+                    
+                                <!-- якщо браузер не підтримує <picture> -->
+                                <img src="./images/portfolio/cashless-payment.jpg" alt="Cashless Payment">
+                            </picture>
                             <p class="portfolio-overlay-text">14 Stylish and User-Friendly App Design Concepts · Task
                                 Manager App · Calorie Tracker
                                 App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
@@ -300,8 +354,24 @@
                     </li>
                     <li class="portfolio-card">
                         <div class="portfolio-image-wrapper">
-                            <img src="./images/portfolio/meditation-app.jpg" alt="Meditation App" width="360"
-                                height="260">
+                            <picture>
+                                <!-- для мобільних -->
+                                <source 
+                                srcset="./images/portfolio/mobile/meditation-app-m@x1.jpg 1x, 
+                                ./images/portfolio/mobile/meditation-app-m@x2.jpg 2x" 
+                                media="(min-width: 320px)">
+                                <!-- для планшетів -->
+                                <source 
+                                srcset="./images/portfolio/mobile/meditation-app-m@x1.jpg" 
+                                media="(min-width: 768px)">
+                                <!-- для десктопів -->
+                                <source 
+                                srcset="./images/portfolio/mobile/meditation-app-m@x1.jpg" 
+                                media="(min-width: 1158px)">
+                    
+                                <!-- якщо браузер не підтримує <picture> -->
+                                <img src="./images/portfolio/meditation-app.jpg" alt="Meditation App">
+                            </picture>
                             <p class="portfolio-overlay-text">14 Stylish and User-Friendly App Design Concepts · Task
                                 Manager App · Calorie Tracker
                                 App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
@@ -313,7 +383,24 @@
                     </li>
                     <li class="portfolio-card">
                         <div class="portfolio-image-wrapper">
-                            <img src="./images/portfolio/taxi-service.jpg" alt="Taxi Service" width="360" height="260">
+                            <picture>
+                                <!-- для мобільних -->
+                                <source 
+                                srcset="./images/portfolio/mobile/taxi-service-m@x1.jpg 1x, 
+                                ./images/portfolio/mobile/taxi-service-m@x2.jpg 2x" 
+                                media="(min-width: 320px)">
+                                <!-- для планшетів -->
+                                <source 
+                                srcset="./images/portfolio/mobile/taxi-service-m@x1.jpg" 
+                                media="(min-width: 768px)">
+                                <!-- для десктопів -->
+                                <source 
+                                srcset="./images/portfolio/mobile/taxi-service-m@x1.jpg" 
+                                media="(min-width: 1158px)">
+                    
+                                <!-- якщо браузер не підтримує <picture> -->
+                                <img src="./images/portfolio/taxi-service.jpg" alt="Taxi Service">
+                            </picture>
                             <p class="portfolio-overlay-text">14 Stylish and User-Friendly App Design Concepts · Task
                                 Manager App · Calorie Tracker
                                 App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
@@ -325,8 +412,24 @@
                     </li>
                     <li class="portfolio-card">
                         <div class="portfolio-image-wrapper">
-                            <img src="./images/portfolio/screen-illustrations.jpg" alt="Screen Illustrations"
-                                width="360" height="260">
+                            <picture>
+                                <!-- для мобільних -->
+                                <source 
+                                srcset="./images/portfolio/mobile/screen-illustrations-m@x1.jpg 1x, 
+                                ./images/portfolio/mobile/screen-illustrations-m@x2.jpg 2x" 
+                                media="(min-width: 320px)">
+                                <!-- для планшетів -->
+                                <source 
+                                srcset="./images/portfolio/mobile/screen-illustrations-m@x1.jpg" 
+                                media="(min-width: 768px)">
+                                <!-- для десктопів -->
+                                <source 
+                                srcset="./images/portfolio/mobile/screen-illustrations-m@x1.jpg" 
+                                media="(min-width: 1158px)">
+                    
+                                <!-- якщо браузер не підтримує <picture> -->
+                                <img src="./images/portfolio/screen-illustrations.jpg" alt="Screen Illustrations">
+                            </picture>
                             <p class="portfolio-overlay-text">14 Stylish and User-Friendly App Design Concepts · Task
                                 Manager App · Calorie Tracker
                                 App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
@@ -338,8 +441,24 @@
                     </li>
                     <li class="portfolio-card">
                         <div class="portfolio-image-wrapper">
-                            <img src="./images/portfolio/online-courses.jpg" alt="Online Courses" width="360"
-                                height="260">
+                            <picture>
+                                <!-- для мобільних -->
+                                <source 
+                                srcset="./images/portfolio/mobile/online-courses-m@x1.jpg 1x, 
+                                ./images/portfolio/mobile/online-courses-m@x2.jpg 2x" 
+                                media="(min-width: 320px)">
+                                <!-- для планшетів -->
+                                <source 
+                                srcset="./images/portfolio/mobile/online-courses-m@x1.jpg" 
+                                media="(min-width: 768px)">
+                                <!-- для десктопів -->
+                                <source 
+                                srcset="./images/portfolio/mobile/online-courses-m@x1.jpg" 
+                                media="(min-width: 1158px)">
+                    
+                                <!-- якщо браузер не підтримує <picture> -->
+                                <img src="./images/portfolio/online-courses.jpg" alt="Online Courses">
+                            </picture>
                             <p class="portfolio-overlay-text">14 Stylish and User-Friendly App Design Concepts · Task
                                 Manager App · Calorie Tracker
                                 App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
@@ -359,7 +478,7 @@
 
     <footer class="footer-content">
         <div class="footer-wrapper">
-            <div class="container">
+            <div class="logo-label">
                 <a href="./index.html" class="logo-footer">
                     WEB<span class="logo-text-footer">Studio</span>
                 </a>
@@ -368,7 +487,7 @@
                     marketing & growth solutions.
                 </p>
             </div>
-            <div class="container">
+            <div class="social-label">
                 <p class="text-social-media">Social media</p>
                 <ul class="social-list">
                     <li class="social-item">
@@ -420,7 +539,7 @@
 
 
     <!-- Modal window -->
-    <div class="modal-window">
+    <div class="modal-window is-open">
         <div class="modal-window-wrapper">
             <button class="modal-window-close-btn" type="button">
                 <svg width="8" height="8">
@@ -475,8 +594,10 @@
                                 <use class="form-field-svg" href="./images/icons.svg#icon-click" />
                             </svg>
                         </span>
-                        I accept the terms and conditions of the
-                        <a href="" class="link-privacy-policy">Privacy Policy</a>
+                         <span class="form-checkbox-text">
+                            I accept the terms and conditions of the
+                            <a href="" class="link-privacy-policy">Privacy Policy</a>
+                        </span>
                     </label>
                 </div>
 
